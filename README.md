@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+````markdown
+# 🌍 Smart Budget Trip Planner
+
+Plan your dream vacation with precision! 🚀  
+The **Smart Budget Trip Planner** lets users input travel preferences, duration, and budget to generate a custom itinerary — complete with cost breakdowns and smart suggestions.  
+
+![banner](https://via.placeholder.com/1200x300?text=Smart+Budget+Trip+Planner)
+
+---
+
+## ✨ Features
+
+- 🧭 Choose destination, duration, and travel mode
+- 🍱 Select food preference: Veg / Non-Veg
+- 🏨 Choose hotel class: 3⭐ / 4⭐ / 5⭐
+- ✈️ Travel type: Cab / Bus / Train / Flight
+- 💸 Set a budget and receive a custom trip plan
+- 📊 Cost breakdown and real-time budget comparison
+- ♻️ Smart adjustment engine if budget is exceeded
+
+---
+
+## 🛠️ Tech Stack
+
+| Frontend | Backend | Database | Others |
+|----------|---------|----------|--------|
+| React.js | Node.js / Express | MongoDB | TailwindCSS, Redux (opt.), REST API |
+
+---
+
+## 🖼️ Screenshots
+
+| 📝 User Input Page | 📈 Trip Summary Page |
+|-------------------|----------------------|
+| ![input](https://via.placeholder.com/400x250) | ![summary](https://via.placeholder.com/400x250) |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/smart-budget-trip-planner.git
+cd smart-budget-trip-planner
+````
+
+### 2. Install dependencies
+
+#### Frontend
+
+```bash
+cd frontend
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Backend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd ../backend
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Start the development servers
 
-## Learn More
+```bash
+# In /frontend
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+# In /backend (in another terminal)
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Folder Structure
 
-## Deploy on Vercel
+```
+project-root/
+│
+├── frontend/           # React application
+├── backend/            # Node.js Express server
+├── data/               # Destination pricing data
+├── README.md           # This file
+└── .env                # API keys and secrets (optional)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📌 How It Works
+
+* Backend loads location-wise pricing data for transport, hotel, and food.
+* Calculates cost:
+  `Total = Travel + (Hotel x Days) + (Food x Days)`
+* If total > budget → downgrades options & suggests a better fit.
+
+---
+
+## 💡 Future Enhancements
+
+* Real API integration (Skyscanner, Booking.com)
+* User authentication & saved trips
+* Maps and hotel previews
+* Multi-currency support
+
+---
+
+## 🙌 Contributing
+
+Contributions are welcome! Open an issue or submit a pull request.
+
+---
+
+## 📃 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ✨ Made with ❤️ by Anirudh Chhabra
+
+```
+
+---
+
+Let me know if you'd like me to:
+- Customize the screenshots for you
+- Link to your GitHub
+- Create a `LICENSE` and `.env.example` file too!
+```
